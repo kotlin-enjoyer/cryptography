@@ -17,8 +17,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            multiDexEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -49,9 +48,9 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                groupId = "com.kotlinenjoyer.cryptography"
+                groupId = "com.github.kotlin-enjoyer"
                 artifactId = "cryptography"
-                version = "1.0"
+                version = "1.4"
             }
         }
     }
